@@ -22,4 +22,6 @@ $("#search").on("click", function () {
     }).then(function (response) {
         $("#artistInfo").text(response.artist.bio.content);
     });
+
+    window.location.href = "results.html";
 });
