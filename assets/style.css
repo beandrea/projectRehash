@@ -1,6 +1,6 @@
-#heading{
-display: flex;
-justify-content: center;
+#heading {
+    display: flex;
+    justify-content: center;
 }
 
 body{
@@ -8,8 +8,13 @@ body{
 }
 
 #welcome { 
-    padding: 10px;
+    padding: 15px;
     border-radius: 12px;
+    box-shadow: 0 0 20px 10px;
+    font-weight: 500;
+    border: 5px solid black;
+    font-family: 'Fredoka One', cursive;
+    background-color: rgb(194, 228, 222);
 }
 
 #inputCard {
@@ -18,12 +23,55 @@ body{
     margin-right: 100px;
     border-radius: 12px;
     padding: 10px;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+    text-align: center;
 }
 
 #aboutCard {
+    font-size: 25px;
     height: 600px;
     width: 400px;
-    margin-left: 100px;
+    margin-left: 200px;
+    margin-top: 50px;
     border-radius: 12px;
     padding: 10px;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+}
+
+.white-text {
+    font-weight: 500;
+}
+
+#music-notes {
+    width: 350px;
+}
+
+#topArtists {
+    background-color: rgb(194, 228, 222);
+    width: 400px;
+    margin-left: 800px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid black;
+    box-shadow: 0 0 20px 10px;
+}
+
+.top-artist-names {
+    cursor: pointer;
+    font-family: 'Amatic SC', cursive;
+    font-size: 25px;
+    margin: 25px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    font-weight: 600;
+    background-color: rgb(0, 114, 114);
+    color: rgb(255, 255, 255);
+}
+
+.top-artist-names:hover {
+    background-color: mediumblue;
+    color: white;
 }
