@@ -1,0 +1,27 @@
+#heading{
+display: flex;
+justify-content: center;
+}
+
+body{
+    background-color: darkgrey;
+}
+
+/* #about{
+    /* padding-left: 200px; */
+    /* position: relative;
+    float: left;
+} */ 
+
+#inputAreas{
+    position: relative;
+    float: right;
+    
+}
+#aboutCard{
+    margin-left: 20%;
+    margin-top: 5%;
+    width: 50%;
+    height: 70%;
+    
+}
