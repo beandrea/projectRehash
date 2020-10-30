@@ -1,6 +1,6 @@
-#heading{
-display: flex;
-justify-content: center;
+#heading {
+    display: flex;
+    justify-content: center;
 }
 
 body{
@@ -14,7 +14,7 @@ body{
     font-weight: 500;
     border: 5px solid black;
     font-family: 'Fredoka One', cursive;
-
+    background-color: rgb(194, 228, 222);
 }
 
 #inputCard {
@@ -49,7 +49,7 @@ body{
 }
 
 #topArtists {
-    background-color: white;
+    background-color: rgb(194, 228, 222);
     width: 400px;
     margin-left: 800px;
     text-align: center;
