@@ -1,16 +1,6 @@
-var apiKey2 = "00eed5848e963c43bd2cd73c8707c667";
-var querylURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=" + apiKey2 + "&format=json";
-
 function test(data) {
     $("#lyric").text(data.message.body.lyrics.lyrics_body);
 }
-
-$.ajax({
-    url: querylURL2,
-    method: "GET"
-}).then(function (response) {
-    console.log(response);
-});
 
 $("#search").on("click", function () {
     var artist = $("#artist").val();
@@ -22,4 +12,14 @@ $("#search").on("click", function () {
 
     var scr = $("<script>").attr("src", querylURL);
     $("body").append(scr);
+
+    var apiKey2 = "00eed5848e963c43bd2cd73c8707c667";
+    var querylURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist +"&api_key=" + apiKey2 + "&format=json";
+
+    $.ajax({
+        url: querylURL2,
+        method: "GET"
+    }).then(function (response) {
+        $("#artistInfo").text(response.artist.bio.content);
+    });
 });
