@@ -1,13 +1,22 @@
 function test(data) {
-    var lyrics = data.message.body.lyrics.lyrics_body;
-    localStorage.setItem("lyrics", lyrics);
+    var header = data.message.header.status_code;
+
+    if (header != 404) {
+        var lyrics = data.message.body.lyrics.lyrics_body;
+        localStorage.clear();
+        localStorage.setItem("lyrics", lyrics);
+    } else {
+        localStorage.setItem("error", "404");
+    }
 }
 
-$(document).ready(function () {
-    $("#search").on("click", function () {
-        var artist = $("#artist").val();
-        var song = $("#song").val();
+function search() {
+    $("#errorText").text("");
 
+    var artist = $("#artist").val();
+    var song = $("#song").val();
+
+    if (artist != null && song != null) {
         var apiKey = "1c6fdd4cb29d4a66960f79e845689e9d";
         var querylURL = "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?format=jsonp&callback=test&q_track=" +
             song + "&q_artist=" + artist + "&apikey=" + apiKey;
@@ -15,26 +24,49 @@ $(document).ready(function () {
         var scr = $("<script>").attr("src", querylURL);
         $("body").append(scr);
 
-        var apiKey2 = "00eed5848e963c43bd2cd73c8707c667";
-        var querylURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=" + apiKey2 + "&format=json";
+        setTimeout(function () {
+            if (localStorage.getItem("error") != "404") {
+                var apiKey2 = "00eed5848e963c43bd2cd73c8707c667";
+                var querylURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=" + apiKey2 + "&format=json";
 
-        $.ajax({
-            url: querylURL2,
-            method: "GET"
-        }).then(function (response) {
-            var artistInfo = response.artist.bio.content;
-            localStorage.setItem("bio", artistInfo);
-            console.log(response);
-        });
+                $.ajax({
+                    url: querylURL2,
+                    method: "GET"
+                }).then(function (response) {
+                    console.log(response);
 
-        setTimeout(function(){
-            window.location.href = "./results.html"
+                    var artistInfo = response.artist.bio.content;
+                    localStorage.setItem("bio", artistInfo);
+                    console.log(response);
+                });
+
+                setTimeout(function () {
+                    window.location.href = "./results.html"
+                }, 200);
+            } else {
+                $("#errorText").text("Search terms invalid, please try again");
+            }
         }, 200);
+    } else {
+        $("#errorText").text("Search terms invalid, please try again");
+    }
+}
+
+$(document).ready(function () {
+
+    $("#search").on("click", search);
+
+    $(document).bind("keypress", function (e) {
+        if (e.keyCode == 13) {
+            $("#search").trigger("click");
+        }
     });
 
-    $(".top-artist-names").on("click", function() {
+
+    $(".top-artist-names").on("click", function () {
         var artistName = $(this).text();
         window.location.href = "https://en.wikipedia.org/wiki/" + artistName;
         console.log(artistName);
-    })
+    });
+
 });
