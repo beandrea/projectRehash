@@ -8,8 +8,12 @@ body{
 }
 
 #welcome { 
-    padding: 10px;
+    padding: 15px;
     border-radius: 12px;
+    box-shadow: 0 0 20px 10px;
+    font-weight: 500;
+    border: 5px solid black;
+
 }
 
 #inputCard {
@@ -18,12 +22,27 @@ body{
     margin-right: 100px;
     border-radius: 12px;
     padding: 10px;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
 }
 
 #aboutCard {
+    font-size: 25px;
     height: 600px;
     width: 400px;
-    margin-left: 100px;
+    margin-left: 200px;
+    margin-top: 50px;
     border-radius: 12px;
     padding: 10px;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+}
+
+.white-text {
+    font-weight: 500;
+}
+
+#music-notes {
+    width: 300px;
+    padding: 50px;
 }
