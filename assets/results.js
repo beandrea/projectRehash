@@ -9,4 +9,9 @@ $(document).ready(function () {
     }
 
     $(document).ready(pull);
+
+    $("#backBtn").on("click", function() {
+        window.location.href = "index.html";
+        localStorage.clear();
+    })
 });

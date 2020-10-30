@@ -24,10 +24,17 @@ $(document).ready(function () {
         }).then(function (response) {
             var artistInfo = response.artist.bio.content;
             localStorage.setItem("bio", artistInfo);
+            console.log(response);
         });
 
         setTimeout(function(){
             window.location.href = "./results.html"
-        }, 500);
+        }, 200);
     });
+
+    $(".top-artist-names").on("click", function() {
+        var artistName = $(this).text();
+        window.location.href = "https://en.wikipedia.org/wiki/" + artistName;
+        console.log(artistName);
+    })
 });
