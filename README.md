@@ -16,4 +16,4 @@ We used two Api's for our app in order to render results. The api used to get th
 
 ![image](https://user-images.githubusercontent.com/69410816/97770007-e83c8980-1b05-11eb-9c10-5b3874ad737d.png)
 
-Andrea, Akash, Maryam, Anthony, 
+Andrea, Akash, Maryam, Anthony, David
