@@ -1,3 +1,3 @@
 # projectRehash
 
-Our lyric finder app allows users to search for an artist and any song by that artist to veiw your results. You are redirected to the results page where the lyrics of that specific song plus the most up to date bio on the artist will be displayed. We used two Api's for our app in order to render results. The api used to get the arist bio is from audio scrobbler and for the lyrics is from musix match.
+Our revolutionary lyric finder app allows users to search for an artist followed by a song of theirs. Upon pressing the search button, the user will be redirected to the results page where the lyrics of that specific song plus the most up to date bio on the artist will be displayed. We used two Api's for our app in order to render results. The api used to get the arist bio is from audio scrobbler and for the lyrics is from musix match.
