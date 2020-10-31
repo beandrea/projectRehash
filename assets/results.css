@@ -5,3 +5,45 @@ body{
 #lyric{
     white-space: pre-wrap;
 }
+
+#lyricCard{
+    font-size: 16px;
+    font-family: 'Archivo', sans-serif;
+    margin-left: 120px;
+    margin-right: 50px;
+    margin-top: 50px;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+}
+
+#artistCard{
+    font-size: 16px;
+    font-family: 'Archivo', sans-serif;
+    margin-top: 10%;
+    border-radius: 12px;
+    padding: 10%;
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+}
+
+#backBtn{
+    box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#backBtn:hover{
+background-color: red;
+color: white;
+}
+
+.infoText{
+    font-family: 'Cairo', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
