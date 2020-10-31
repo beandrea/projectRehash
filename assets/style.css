@@ -14,11 +14,7 @@ body{
     font-weight: 500;
     border: 5px solid black;
     font-family: 'Fredoka One', cursive;
-    background-color: rgb(194, 228, 222);
-    
-    
-    
-    
+    background-color: rgb(194, 228, 222);    
 }
 
 #inputCard {
@@ -30,8 +26,6 @@ body{
     box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
     border: 2px solid black;
     text-align: center;
-    
-    
 }
 
 #aboutCard {
@@ -44,8 +38,6 @@ body{
     padding: 10px;
     box-shadow: 0 0px 30px 10px rgb(98, 98, 192);
     border: 2px solid black;
-    
-    
 }
 
 .white-text {
@@ -88,7 +80,6 @@ body{
 @media screen and (max-width:1290px) {
     #aboutCard {
         margin-left: 20px;
-    
     }
 
     #inputAreas {
@@ -97,11 +88,5 @@ body{
 
     #topArtists {
         margin-left: 20px;
-
-        
     }
-    
-
-
-
 }
