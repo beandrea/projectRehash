@@ -1,5 +1,6 @@
 body{
-    background-color: #64ffda;
+    height: 200px;
+    background: linear-gradient(90deg, rgba(122,129,237,1) 0%, rgba(109,208,226,1) 50%, rgba(100,255,218,1) 100%);
 }
 
 #lyric{
@@ -50,4 +51,14 @@ color: white;
     font-family: 'Cairo', sans-serif;
     font-size: 32px;
     font-weight: bold;
+}
+
+a{
+    color: purple;
+}
+
+#music-notes{
+    position: absolute;
+    right: 200px;
+    top: 400px;
 }
