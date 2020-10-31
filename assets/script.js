@@ -26,17 +26,24 @@ function search() {
 
         setTimeout(function () {
             if (localStorage.getItem("error") != "404") {
-                var apiKey2 = "00eed5848e963c43bd2cd73c8707c667";
-                var querylURL2 = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=" + apiKey2 + "&format=json";
+                apiKey = "00eed5848e963c43bd2cd73c8707c667";
+                querylURL = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artist + "&api_key=" + apiKey + "&format=json";
 
                 $.ajax({
-                    url: querylURL2,
+                    url: querylURL,
                     method: "GET"
                 }).then(function (response) {
                     var artistInfo = response.artist.bio.summary;
-
                     localStorage.setItem("bio", artistInfo);
-                    console.log(response);
+                });
+
+                querylURL = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + artist + "&api_key=" + apiKey + "&format=json";
+
+                $.ajax({
+                    url: querylURL,
+                    method: "GET"
+                }).then(function (response) {
+                    localStorage.setItem("albums", JSON.stringify(response));
                 });
 
                 setTimeout(function () {
