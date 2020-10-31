@@ -14,7 +14,11 @@
 </head>
 
 <body>
+
+    <!-- row that holds the divs containing cards which will impliment the API response from the js -->
+    <!-- divs here are not dynamically added -->
     <div class="row">
+        <!-- Lyric card that will hold the lyrics -->
         <div class="col s6 m6">
             <div class="card-panel teal" id="lyricCard">
                 <div> <span class="infoText">LYRICS: </span> 
@@ -22,6 +26,9 @@
                 <span class="white-text" id="lyric"></span></div>
             </div>
         </div>
+
+        <!-- Artist information card that will hold a breif summary of the artist -->
+        <!-- hyperlink is added in js for more information on the artist for the user to view at their liking -->
         <div class="col s6 m5" id="artistDiv">
             <div class="card-panel teal" id="artistCard">
                 <div> <span class="infoText">ARTIST INFO: </span> 
@@ -31,6 +38,7 @@
         </div>
     </div>
 
+    <!-- home button connecting to index.html -->
     <button class="btn waves-effect waves-light" id="backBtn" type="submit" name="action">Home</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
