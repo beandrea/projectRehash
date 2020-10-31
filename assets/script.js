@@ -33,9 +33,8 @@ function search() {
                     url: querylURL2,
                     method: "GET"
                 }).then(function (response) {
-                    console.log(response);
+                    var artistInfo = response.artist.bio.summary;
 
-                    var artistInfo = response.artist.bio.content;
                     localStorage.setItem("bio", artistInfo);
                     console.log(response);
                 });
