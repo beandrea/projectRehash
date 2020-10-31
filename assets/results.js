@@ -4,12 +4,6 @@ $(document).ready(function () {
         var lyrics = localStorage.getItem("lyrics");
         var bio = localStorage.getItem("bio");
 
-        for(var i = 0; i < lyrics.length; i++){
-            if(lyrics[i] == String.fromCharCode(10)){
-                console.log(i + " i am a new line");
-            }
-        }
-
         $("#lyric").text(lyrics);
         $("#artist").text(bio);
     }
