@@ -16,9 +16,14 @@
 </head>
 
 <body>
+    <!--Home button for user to search more lyrics-->
+    <div class="buttonContainer">
+        <button class="btn waves-effect waves-light" id="backBtn" type="submit" name="action">Home</button>
+    </div>
 
     <!-- row that holds the divs containing cards which will impliment the API response from the js -->
     <!-- divs here are not dynamically added -->
+    <div class="container">
     <div class="row">
         <!-- Lyric card that will hold the lyrics -->
         <div class="col s6 m6">
@@ -31,7 +36,7 @@
 
         <!-- Artist information card that will hold a breif summary of the artist -->
         <!-- hyperlink is added in js for more information on the artist for the user to view at their liking -->
-        <div class="col s6 m5" id="artistDiv">
+        <div class="col s6 m6" id="artistDiv">
             <div class="card-panel teal" id="artistCard">
                 <div> <span class="infoText">ARTIST INFO: </span>
                     </br>
@@ -50,15 +55,10 @@
         </div>
 
         <!--Fun little music notes!-->
-        <div class=" col s6 m6">
+        <div class="notesDiv col s6 m6">
             <img id="music-notes" src="https://media2.giphy.com/media/fsKlPTZ9lPgJPftBC0/giphy.gif" alt="music notes">
         </div>
     </div>
-
-
-    <!--Home button for user to search more lyrics-->
-    <div>
-        <button class="btn waves-effect waves-light" id="backBtn" type="submit" name="action">Home</button>
     </div>
 </body>
 

@@ -91,3 +91,20 @@ body{
         margin-left: 20px;
     }
 }
+
+@media screen and (max-width:1000px) {
+    .row {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row .col.s6 {
+        width: 70%;
+        margin-left: unset;
+    }
+
+    .row .col.m6 {
+        margin-left: unset;
+    }
+}
