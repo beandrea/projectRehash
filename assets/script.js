@@ -1,11 +1,11 @@
 // function to store data from api
 function test(data) {
     var header = data.message.header.status_code;
+    localStorage.clear();
 
     // if 404 error does not occur get lyrics data and save it in local storage
     if (header != 404) {
         var lyrics = data.message.body.lyrics.lyrics_body;
-        localStorage.clear();
         localStorage.setItem("lyrics", lyrics);
         // otherwise save 404 error to local storage to be called upon
     } else {
@@ -21,6 +21,7 @@ function search() {
     // setting variables for input values
     var artist = $("#artist").val();
     var song = $("#song").val();
+
 
     // validates user entries
     if (artist != null && song != null) {
@@ -46,6 +47,8 @@ function search() {
                 }).then(function (response) {
                     var artistInfo = response.artist.bio.summary;
                     localStorage.setItem("bio", artistInfo);
+                    console.log(artist)
+                    localStorage.setItem("artist", artist);
                 });
 
                 // times out window for local storage to update

@@ -62,3 +62,13 @@ a{
     right: 200px;
     top: 400px;
 }
+
+.videoDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#gifVideoTag{
+    min-width: 320px;
+    min-height: 240px;
+}
