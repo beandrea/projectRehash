@@ -55,3 +55,9 @@ color: white;
 a{
     color: purple;
 }
+
+#music-notes{
+    position: absolute;
+    right: 200px;
+    top: 400px;
+}
