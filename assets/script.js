@@ -24,6 +24,7 @@ function search() {
         var scr = $("<script>").attr("src", querylURL);
         $("body").append(scr);
 
+
         setTimeout(function () {
             if (localStorage.getItem("error") != "404") {
                 apiKey = "00eed5848e963c43bd2cd73c8707c667";
@@ -35,15 +36,6 @@ function search() {
                 }).then(function (response) {
                     var artistInfo = response.artist.bio.summary;
                     localStorage.setItem("bio", artistInfo);
-                });
-
-                querylURL = "http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=" + artist + "&api_key=" + apiKey + "&format=json";
-
-                $.ajax({
-                    url: querylURL,
-                    method: "GET"
-                }).then(function (response) {
-                    localStorage.setItem("albums", JSON.stringify(response));
                 });
 
                 setTimeout(function () {
